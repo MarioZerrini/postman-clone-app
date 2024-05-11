@@ -63,12 +63,12 @@
             apiText.BorderStyle = BorderStyle.FixedSingle;
             apiText.Location = new Point(178, 129);
             apiText.Name = "apiText";
-            apiText.Size = new Size(391, 39);
+            apiText.Size = new Size(430, 39);
             apiText.TabIndex = 2;
             // 
             // callApi
             // 
-            callApi.Location = new Point(575, 129);
+            callApi.Location = new Point(614, 129);
             callApi.Name = "callApi";
             callApi.Size = new Size(68, 39);
             callApi.TabIndex = 3;
@@ -85,16 +85,16 @@
             resultsText.Name = "resultsText";
             resultsText.ReadOnly = true;
             resultsText.ScrollBars = ScrollBars.Both;
-            resultsText.Size = new Size(524, 328);
+            resultsText.Size = new Size(563, 328);
             resultsText.TabIndex = 4;
             // 
             // statusStrip
             // 
-            statusStrip.Items.AddRange(new ToolStripItem[] { systemStatus });
             statusStrip.BackColor = Color.White;
-            statusStrip.Location = new Point(0, 623);
+            statusStrip.Items.AddRange(new ToolStripItem[] { systemStatus });
+            statusStrip.Location = new Point(0, 657);
             statusStrip.Name = "statusStrip";
-            statusStrip.Size = new Size(810, 30);
+            statusStrip.Size = new Size(852, 30);
             statusStrip.TabIndex = 5;
             statusStrip.Text = "System Status";
             // 
@@ -119,7 +119,7 @@
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(810, 653);
+            ClientSize = new Size(852, 687);
             Controls.Add(resultsLabel);
             Controls.Add(statusStrip);
             Controls.Add(resultsText);
