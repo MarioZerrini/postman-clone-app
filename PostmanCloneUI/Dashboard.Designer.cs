@@ -37,9 +37,9 @@
             httpVerbSelection = new ComboBox();
             callData = new TabControl();
             bodyTab = new TabPage();
+            bodyText = new TextBox();
             resultsTab = new TabPage();
             resultsText = new TextBox();
-            bodyText = new TextBox();
             statusStrip.SuspendLayout();
             callData.SuspendLayout();
             bodyTab.SuspendLayout();
@@ -104,7 +104,7 @@
             // 
             httpVerbSelection.DropDownStyle = ComboBoxStyle.DropDownList;
             httpVerbSelection.FormattingEnabled = true;
-            httpVerbSelection.Items.AddRange(new object[] { "GET", "POST" });
+            httpVerbSelection.Items.AddRange(new object[] { "GET", "POST", "PUT", "PATCH", "DELETE" });
             httpVerbSelection.Location = new Point(85, 125);
             httpVerbSelection.Name = "httpVerbSelection";
             httpVerbSelection.Size = new Size(98, 40);
@@ -131,13 +131,25 @@
             bodyTab.Text = "Body";
             bodyTab.UseVisualStyleBackColor = true;
             // 
+            // bodyText
+            // 
+            bodyText.BackColor = Color.White;
+            bodyText.BorderStyle = BorderStyle.FixedSingle;
+            bodyText.Dock = DockStyle.Fill;
+            bodyText.Location = new Point(3, 3);
+            bodyText.Multiline = true;
+            bodyText.Name = "bodyText";
+            bodyText.ScrollBars = ScrollBars.Both;
+            bodyText.Size = new Size(781, 381);
+            bodyText.TabIndex = 6;
+            // 
             // resultsTab
             // 
             resultsTab.Controls.Add(resultsText);
-            resultsTab.Location = new Point(4, 41);
+            resultsTab.Location = new Point(4, 24);
             resultsTab.Name = "resultsTab";
             resultsTab.Padding = new Padding(3);
-            resultsTab.Size = new Size(787, 387);
+            resultsTab.Size = new Size(787, 404);
             resultsTab.TabIndex = 1;
             resultsTab.Text = "Results";
             resultsTab.UseVisualStyleBackColor = true;
@@ -152,20 +164,8 @@
             resultsText.Name = "resultsText";
             resultsText.ReadOnly = true;
             resultsText.ScrollBars = ScrollBars.Both;
-            resultsText.Size = new Size(781, 381);
+            resultsText.Size = new Size(781, 398);
             resultsText.TabIndex = 6;
-            // 
-            // bodyText
-            // 
-            bodyText.BackColor = Color.White;
-            bodyText.BorderStyle = BorderStyle.FixedSingle;
-            bodyText.Dock = DockStyle.Fill;
-            bodyText.Location = new Point(3, 3);
-            bodyText.Multiline = true;
-            bodyText.Name = "bodyText";
-            bodyText.ScrollBars = ScrollBars.Both;
-            bodyText.Size = new Size(781, 381);
-            bodyText.TabIndex = 6;
             // 
             // Dashboard
             // 

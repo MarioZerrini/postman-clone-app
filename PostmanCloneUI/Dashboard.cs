@@ -33,8 +33,6 @@ public partial class Dashboard : Form
 
         try
         {
-            systemStatus.Text = "Calling API...";
-
             resultsText.Text = await api.CallApiAsync(apiText.Text, bodyText.Text, action); // await says: we are gonna let the ui have control until we are done with this call and we are gonna pause the code on this line
             callData.SelectedTab = resultsTab;
             resultsTab.Focus();
