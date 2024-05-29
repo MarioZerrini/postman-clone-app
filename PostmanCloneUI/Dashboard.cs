@@ -24,12 +24,20 @@ public partial class Dashboard : Form
             return;
         }
 
+        HttpAction action;
+        if (Enum.TryParse(httpVerbSelection.SelectedItem!.ToString(), out action) == false) // try to parse the string
+        {
+            systemStatus.Text = "Invalid HTTP Verb";
+            return;
+        }
+
         try
         {
             systemStatus.Text = "Calling API...";
 
-            resultsText.Text = await api.CallApiAsync(apiText.Text); // await says: we are gonna let the ui have control until we are done with this call and we are gonna pause the code on this line
+            resultsText.Text = await api.CallApiAsync(apiText.Text, bodyText.Text, action); // await says: we are gonna let the ui have control until we are done with this call and we are gonna pause the code on this line
             callData.SelectedTab = resultsTab;
+            resultsTab.Focus();
 
             systemStatus.Text = "Ready";
         }
